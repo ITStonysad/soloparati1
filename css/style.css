@@ -1,0 +1,981 @@
+/*==================================================
+                GOOGLE FONTS
+==================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/*==================================================
+                    RESET
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#08070B;
+
+    color:#F8F8F8;
+
+    overflow:hidden;
+
+}
+/*==================================================
+                VARIABLES
+==================================================*/
+
+:root{
+
+    --bg:#08070B;
+    --bg2:#160A20;
+
+    --white:#F8F8F8;
+    --gray:#CFCFCF;
+
+    --pink:#FF6FAE;
+    --pinkLight:#FFD7E8;
+
+    --glass:rgba(255,255,255,.06);
+
+}
+
+/*==================================================
+                BACKGROUND
+==================================================*/
+
+#background{
+
+    animation: backgroundMove 20s linear infinite;
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    background:
+
+    radial-gradient(circle at top right,
+
+    #2A123A 0%,
+
+    #140A20 35%,
+
+    #08070B 100%);
+
+}
+
+/*==================================================
+                    MOON
+==================================================*/
+
+#moon{
+
+    position: fixed;
+
+    top: 40px;
+
+    right: 60px;
+
+    width: 220px;
+
+    height: 220px;
+
+    background: url("../img/ui/moon.png") center/contain no-repeat;
+
+    filter:
+        drop-shadow(0 0 25px rgba(255,255,255,.9))
+        drop-shadow(0 0 60px rgba(255,255,255,.45));
+
+    opacity: .95;
+
+    pointer-events: none;
+
+    z-index: 2;
+
+    animation: moonGlow 5s ease-in-out infinite;
+
+}
+
+/*==================================================
+                    INTRO
+==================================================*/
+
+#intro{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    z-index:100;
+
+}
+
+
+
+.intro-content{
+
+    width:min(700px,90%);
+
+}
+
+
+
+.intro-tag{
+
+    color:var(--pink);
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.8rem;
+
+}
+
+
+
+#intro h1{
+
+    margin-top:25px;
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:92px;
+
+    font-weight:400;
+
+    line-height:1.1;
+
+}
+
+
+#intro p{
+
+    margin-top:30px;
+
+    color:var(--gray);
+
+    font-size:20px;
+
+    line-height:38px;
+
+}
+
+
+
+#startBtn{
+
+    margin-top:55px;
+
+    padding:18px 45px;
+
+    background:transparent;
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.2);
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+    transition:.35s;
+
+}
+
+#startBtn:hover{
+
+    background:rgba(255,255,255,.08);
+
+    border-color:var(--pink);
+
+    color:var(--pinkLight);
+
+    transform:translateY(-4px);
+
+}
+
+
+/*==================================================
+                    STORY
+==================================================*/
+
+#story{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    width:100%;
+
+    height:100vh;
+
+    padding:40px;
+
+    z-index:20;
+
+}
+
+
+/*==================================================
+                    SCENE
+==================================================*/
+
+.scene{
+
+    position: relative;
+
+    z-index: 10;
+
+    width:100%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+/*==================================================
+                SCENE IMAGE
+==================================================*/
+
+.scene-image{
+
+    backdrop-filter:blur(6px);
+
+    transition:.8s;
+
+    position:relative;
+
+    width:720px;
+
+    max-width:90%;
+
+    aspect-ratio:16/9;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.45),
+        0 0 30px rgba(255,111,174,.15);
+
+}
+
+
+/*==================================================
+                IMAGEN
+==================================================*/
+
+.scene-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    animation:kenBurns 18s ease-in-out forwards;
+
+    transition:opacity .8s ease;
+
+}
+/*==================================================
+            EFECTO HOVER
+==================================================*/
+
+.scene-image:hover img{
+
+    transform:scale(1.02);
+
+}
+
+
+.scene-text{
+
+    width:480px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+/*==================================================
+                SCENE TEXT
+==================================================*/
+
+.scene-text{
+
+    width:450px;
+
+}
+
+
+
+
+#scenePhrase{
+
+    max-width:900px;
+
+    padding:20px 35px;
+
+    border-radius:18px;
+
+    backdrop-filter:blur(12px);
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    font-size:2rem;
+
+    line-height:1.6;
+
+    text-align:center;
+
+    color:white;
+
+    text-shadow:
+
+        0 0 15px rgba(255,255,255,.4);
+
+}
+
+/*==================================================
+                    PLAYER
+==================================================*/
+
+#player{
+
+    width:min(900px,85%);
+
+    margin-top:70px;
+
+}
+
+
+/*==================================================
+                    PLAYER
+==================================================*/
+
+#player{
+
+    width:min(900px,85%);
+
+    margin-top:70px;
+
+}
+
+
+
+#song{
+
+    text-align:center;
+
+    margin-bottom:18px;
+
+    color:#cfcfcf;
+
+    letter-spacing:1px;
+
+}
+
+#progress{
+
+    width:100%;
+
+    height:5px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+}
+
+
+#bar{
+
+    width:0;
+
+    height:100%;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        #FF6FAE,
+
+        #FFD5E7
+
+    );
+
+}
+
+
+#time{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:12px;
+
+    color:#bdbdbd;
+
+    font-size:14px;
+
+}
+
+
+
+/*==================================================
+                    ENDING
+==================================================*/
+
+#ending{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    z-index:200;
+
+    background:rgba(8,7,11,.94);
+
+}
+
+
+
+.ending-content h2{
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:88px;
+
+    font-weight:400;
+
+}
+
+
+.ending-content p{
+
+    margin-top:25px;
+
+    font-size:22px;
+
+    line-height:40px;
+
+    color:#cfcfcf;
+
+}
+
+
+
+.ending-content p{
+
+    margin-top:25px;
+
+    font-size:22px;
+
+    line-height:40px;
+
+    color:#cfcfcf;
+
+}
+
+
+/*==================================================
+                    STAR
+==================================================*/
+
+.star{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:
+        0 0 4px rgba(255,255,255,.8),
+        0 0 10px rgba(255,255,255,.6),
+        0 0 18px rgba(255,255,255,.4);
+
+    animation:twinkle linear infinite;
+
+}
+
+/*==================================================
+            ESTRELLA FUGAZ
+==================================================*/
+
+.shooting-star{
+
+    position:absolute;
+
+    width:180px;
+
+    height:2px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        white,
+
+        rgba(255,255,255,.6),
+
+        transparent
+
+    );
+
+    border-radius:50px;
+
+    box-shadow:
+
+        0 0 12px white,
+
+        0 0 25px rgba(255,255,255,.8);
+
+    transform:rotate(-35deg);
+
+    animation:shooting linear forwards;
+
+}
+
+/*==================================================
+            PETALS BACK
+==================================================*/
+
+#petalsBack{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:4;
+
+}
+
+/*==================================================
+            PETALS FRONT
+==================================================*/
+
+#petalsFront{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+    z-index:25;
+
+}
+
+/*==================================================
+                FIREWORKS
+==================================================*/
+
+#fireworks{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:40;
+
+}
+
+.firework{
+
+    position:absolute;
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:var(--color);
+
+    box-shadow:
+        0 0 10px var(--color),
+        0 0 25px var(--color),
+        0 0 50px var(--color);
+
+    animation:explode 1.8s ease-out forwards;
+
+}
+
+/*==================================================
+                ENDING
+==================================================*/
+
+.ending-small{
+
+    display:block;
+
+    margin-bottom:20px;
+
+    color:#ffd8ea;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.9rem;
+
+    opacity:.9;
+
+}
+
+.ending-content h2{
+
+    font-size:3rem;
+
+    margin-bottom:25px;
+
+}
+
+.ending-content p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    font-size:1.2rem;
+
+    opacity:.95;
+
+}
+
+.ending-content h3{
+
+    margin-top:45px;
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:2.7rem;
+
+    color:#ffd5e7;
+
+    text-shadow:0 0 20px rgba(255,180,220,.6);
+
+}
+
+
+/*==================================================
+                INTERACTION
+==================================================*/
+
+#interaction{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    background:rgba(0,0,0,.55);
+
+    backdrop-filter:blur(10px);
+
+    z-index:200;
+
+}
+
+.interaction-content{
+
+    text-align:center;
+
+    color:white;
+
+    max-width:700px;
+
+    padding:40px;
+
+}
+
+.interaction-content h2{
+
+    font-size:2.6rem;
+
+    margin-bottom:20px;
+
+}
+
+.interaction-content p{
+
+    font-size:1.2rem;
+
+    margin-bottom:50px;
+
+    opacity:.9;
+
+}
+
+.interaction-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+}
+
+.interaction-buttons button{
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:1.1rem;
+
+    transition:.35s;
+
+}
+
+#yesBtn{
+
+    background:#ff4d88;
+
+    color:white;
+
+}
+
+#yesBtn:hover{
+
+    transform:scale(1.08);
+
+}
+
+#noBtn{
+
+    position:relative;
+
+    transition:
+        left .35s ease,
+        top .35s ease,
+        transform .25s ease,
+        background .25s ease;
+
+    z-index:999;
+
+}
+
+#noBtn:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+
+#interactionButtons{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+    transition:.8s;
+
+}
+
+#interactionButtons.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+/*==================================================
+                CONSTELACIÓN
+==================================================*/
+
+#constellation{
+
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    z-index: 180;
+
+    background: rgba(8,7,11,.92);
+
+}
+
+/*==================================================
+                CANVAS CONSTELACIÓN
+==================================================*/
+
+#constellationCanvas{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+    z-index:1;
+
+}
+
+.constellation-message{
+
+    position: absolute;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform: translate(-50%,-50%);
+
+    width: min(900px,90%);
+
+    text-align: center;
+
+    z-index: 10;
+
+    pointer-events: none;
+
+}
+
+#constellationTitle{
+
+    font-family: "Great Vibes", cursive;
+
+    font-size: 5rem;
+
+    color: #ffd8ea;
+
+    text-shadow:
+        0 0 15px rgba(255,180,220,.8),
+        0 0 35px rgba(255,180,220,.5);
+
+    margin-bottom: 30px;
+
+}
+
+#constellationText{
+
+    font-size: 1.5rem;
+
+    color: white;
+
+    line-height: 1.8;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    text-shadow: 0 0 15px rgba(255,255,255,.35);
+
+}

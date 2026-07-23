@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bajo la Misma Luna ❤️</title>
+
+    <meta name="description"
+        content="Una experiencia interactiva creada con mucho cariño.">
+
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- =====================================
+                AUDIO
+    ====================================== -->
+
+    <audio id="music" preload="auto">
+        <source src="audio/tiroteo.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- =====================================
+                BACKGROUND
+    ====================================== -->
+
+    <div id="background">
+
+        <div id="moon"></div>
+
+        <div id="stars"></div>
+
+        <div id="particles"></div>
+
+        <div id="petalsBack"></div>
+
+        <div id="petalsFront"></div>
+
+        <div id="hearts"></div>
+
+    </div>
+
+    <!-- =====================================
+                INTRO
+    ====================================== -->
+
+    <section id="intro">
+
+        <div class="intro-content">
+
+            <span class="intro-tag">
+                Una experiencia para alguien especial
+            </span>
+
+            <h1>
+
+                Bajo la Misma Luna
+
+            </h1>
+
+            <p>
+
+                Hay canciones que simplemente se escuchan...
+
+                <br><br>
+
+                pero otras hacen pensar en una persona.
+
+            </p>
+
+            <button id="startBtn">
+
+                Comenzar la experiencia
+
+            </button>
+
+        </div>
+
+    </section>
+
+<!-- =====================================
+                HISTORIA
+===================================== -->
+
+<main id="story">
+
+    <section class="scene">
+
+        <h2 id="scenePhrase"></h2>
+
+        <div class="scene-image">
+
+            <img id="sceneImage" src="" alt="Escena">
+
+            <div class="scene-flash"></div>
+
+        </div>
+
+    </section>
+
+    <!-- PLAYER -->
+
+    <footer id="player">
+
+        <div id="song">
+
+            <span>
+
+                Marc Seguí · Tiroteo
+
+            </span>
+
+        </div>
+
+        <div id="progress">
+
+            <div id="bar"></div>
+
+        </div>
+
+        <div id="time">
+
+            <span id="currentTime">
+
+                00:00
+
+            </span>
+
+            <span id="duration">
+
+                00:00
+
+            </span>
+
+        </div>
+
+    </footer>
+
+</main>
+
+<!-- =====================================
+            INTERACCIÓN
+===================================== -->
+
+<section id="interaction">
+
+    <div class="interaction-content">
+
+        <h2 id="interactionTitle"></h2>
+
+        <p id="interactionText"></p>
+
+        <div class="interaction-buttons" id="interactionButtons">
+
+            <button id="yesBtn">
+
+                ❤️ Sí, continúa ❤️
+
+            </button>
+
+            <button id="noBtn">
+
+                No
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+            CONSTELACIÓN
+===================================== -->
+
+<section id="constellation">
+
+    <canvas id="constellationCanvas"></canvas>
+
+    <div class="constellation-message">
+
+        <h2 id="constellationTitle"></h2>
+
+        <p id="constellationText"></p>
+
+    </div>
+
+</section>
+
+<!-- =====================================
+                FINAL
+===================================== -->
+
+<section id="ending" style="display: none;">
+
+    <div class="ending-content">
+
+        <span class="ending-small">
+
+            Gracias por llegar hasta aquí
+
+        </span>
+
+        <h2>
+
+            ❤️ Gracias por escuchar esta historia ❤️
+
+        </h2>
+
+        <p>
+
+            Hay personas que llegan a nuestra vida sin hacer ruido...
+
+            <br><br>
+
+            pero terminan convirtiéndose en los recuerdos más bonitos.
+
+        </p>
+
+        <h3>
+
+            Bajo la misma luna...
+            siempre habrá un lugar para ti.
+
+        </h3>
+
+    </div>
+
+</section>
+<!-- =====================================
+            JAVASCRIPT
+===================================== -->
+
+<script src="js/utils.js"></script>
+
+<script src="js/stars.js"></script>
+
+<script src="js/petals.js"></script>
+
+<script src="js/hearts.js"></script>
+
+<script src="js/particles.js"></script>
+
+
+<script src="js/fireworks.js"></script>
+
+<script src="js/music.js"></script>
+
+<script src="js/story.js"></script>
+
+<script src="js/constellation.js"></script>
+
+<script src="js/interaction.js"></script>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,729 @@
+/*==================================================
+                FADE IN
+==================================================*/
+
+.fadeIn{
+
+    animation:fadeIn 1.5s ease forwards;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+/*==================================================
+                FADE OUT
+==================================================*/
+
+.fadeOut{
+
+    animation:fadeOut 1.2s ease forwards;
+
+}
+
+@keyframes fadeOut{
+
+    from{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        opacity:0;
+
+    }
+
+}
+
+/*==================================================
+                FLOATING
+==================================================*/
+
+.floating{
+
+    animation:floating 6s ease-in-out infinite;
+
+}
+
+@keyframes floating{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
+
+/*==================================================
+                PULSE
+==================================================*/
+
+.pulse{
+
+    animation:pulse 2.5s infinite;
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.04);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/*==================================================
+                ZOOM
+==================================================*/
+
+.zoom{
+
+    animation:zoom 18s linear infinite alternate;
+
+}
+
+@keyframes zoom{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+/*==================================================
+                MOON GLOW
+==================================================*/
+
+#moon{
+
+    animation: moonGlow 5s ease-in-out infinite;
+
+}
+
+@keyframes moonGlow{
+
+    0%{
+
+        transform: scale(1);
+
+        filter:
+            drop-shadow(0 0 20px rgba(255,255,255,.8))
+            drop-shadow(0 0 35px rgba(255,184,223,.45));
+
+        opacity: .92;
+
+    }
+
+    50%{
+
+        transform: scale(1.05);
+
+        filter:
+            drop-shadow(0 0 35px rgba(255,255,255,1))
+            drop-shadow(0 0 70px rgba(255,184,223,.8));
+
+        opacity: 1;
+
+    }
+
+    100%{
+
+        transform: scale(1);
+
+        filter:
+            drop-shadow(0 0 20px rgba(255,255,255,.8))
+            drop-shadow(0 0 35px rgba(255,184,223,.45));
+
+        opacity: .92;
+
+    }
+
+}
+
+/*==================================================
+            IMAGE CHANGE
+==================================================*/
+
+.changeScene{
+
+    animation:changeScene 1.4s ease;
+
+}
+
+@keyframes changeScene{
+
+    0%{
+
+        opacity:0;
+
+        transform:scale(.96);
+
+        filter:blur(8px);
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:scale(1);
+
+        filter:blur(0);
+
+    }
+
+}
+
+/*==================================================
+            PHRASE
+==================================================*/
+
+.showPhrase{
+
+    animation:showPhrase 1.2s ease;
+
+}
+
+@keyframes showPhrase{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================================
+            BUTTON
+==================================================*/
+
+#startBtn{
+
+    animation:buttonGlow 3s ease-in-out infinite;
+
+}
+
+@keyframes buttonGlow{
+
+    0%{
+
+        box-shadow:0 0 8px rgba(255,111,174,.2);
+
+    }
+
+    50%{
+
+        box-shadow:
+
+        0 0 25px rgba(255,111,174,.45);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 8px rgba(255,111,174,.2);
+
+    }
+
+}
+
+/*=========================================
+        CAMBIO DE ESCENA
+=========================================*/
+
+.changeScene{
+
+    animation:sceneTransition 1.2s ease;
+
+}
+
+@keyframes sceneTransition{
+
+    0%{
+
+        opacity:0;
+
+        transform:scale(1.08);
+
+        filter:blur(8px);
+
+    }
+
+    50%{
+
+        opacity:.6;
+
+    }
+
+    100%{
+
+        opacity:1;
+
+        transform:scale(1);
+
+        filter:blur(0);
+
+    }
+
+}
+
+
+/*==================================================
+                LUNA
+==================================================*/
+
+@keyframes moonFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+}
+
+@keyframes moonGlow{
+
+    0%,100%{
+
+        filter:
+
+            drop-shadow(0 0 20px rgba(255,180,255,.35));
+
+    }
+
+    50%{
+
+        filter:
+
+            drop-shadow(0 0 40px rgba(255,180,255,.8));
+
+    }
+
+}
+
+@keyframes backgroundMove{
+
+    0%{
+
+        background-position:0 0;
+
+    }
+
+    100%{
+
+        background-position:300px 0;
+
+    }
+
+}
+
+/*=========================================
+            TWINKLE
+=========================================*/
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.15;
+
+        transform:scale(.8);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.4);
+
+    }
+
+}
+
+
+/*=========================================
+        ESTRELLA FUGAZ
+=========================================*/
+
+.shooting-star{
+
+    position:absolute;
+
+    width:180px;
+
+    height:2px;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+
+        90deg,
+
+        white,
+
+        transparent
+
+    );
+
+    transform:rotate(-35deg);
+
+    animation:shooting 2.2s linear forwards;
+
+}
+
+
+@keyframes shooting{
+
+    from{
+
+        transform:
+
+        translate(0,0)
+
+        rotate(-35deg);
+
+        opacity:0;
+
+    }
+
+    10%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+
+        translate(-900px,550px)
+
+        rotate(-35deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/*==================================================
+                KEN BURNS
+==================================================*/
+
+@keyframes kenBurns{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    100%{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+/*==================================================
+            SHOOTING STAR
+==================================================*/
+
+@keyframes shooting{
+
+    0%{
+
+        opacity:0;
+
+        transform:
+
+            translate(0,0)
+
+            rotate(-35deg);
+
+    }
+
+    10%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        transform:
+
+            translate(-1400px,900px)
+            rotate(-35deg);
+
+    }
+
+}
+
+
+/*==================================================
+                MOON GLOW
+==================================================*/
+
+@keyframes moonGlow{
+
+    0%{
+
+        transform: scale(1);
+
+        filter:
+            drop-shadow(0 0 20px rgba(255,255,255,.7))
+            drop-shadow(0 0 40px rgba(255,255,255,.35));
+
+    }
+
+    50%{
+
+        transform: scale(1.05);
+
+        filter:
+            drop-shadow(0 0 35px rgba(255,255,255,1))
+            drop-shadow(0 0 80px rgba(255,255,255,.6));
+
+    }
+
+    100%{
+
+        transform: scale(1);
+
+        filter:
+            drop-shadow(0 0 20px rgba(255,255,255,.7))
+            drop-shadow(0 0 40px rgba(255,255,255,.35));
+
+    }
+
+}
+
+
+/*==================================================
+                TWINKLE
+==================================================*/
+
+@keyframes twinkle{
+
+    0%{
+
+        opacity:.2;
+
+        transform:scale(.8);
+
+    }
+
+    20%{
+
+        opacity:.8;
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.4);
+
+    }
+
+    80%{
+
+        opacity:.6;
+
+        transform:scale(1);
+
+    }
+
+    100%{
+
+        opacity:.2;
+
+        transform:scale(.8);
+
+    }
+
+}
+
+/*==================================================
+                FIREWORK
+==================================================*/
+
+@keyframes explode{
+
+    0%{
+
+        transform:scale(.2);
+
+        opacity:1;
+
+    }
+
+    60%{
+
+        transform:scale(12);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(18);
+
+        opacity:0;
+
+    }
+
+}
+
+/*==================================================
+                KEN BURNS
+==================================================*/
+
+@keyframes kenBurns{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    100%{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+/*==================================================
+            DESVANECER MENSAJES
+==================================================*/
+
+@keyframes fadeMessageOut{
+
+    from{
+
+        opacity:1;
+        transform:translate(-50%,-50%) scale(1);
+
+    }
+
+    to{
+
+        opacity:0;
+        transform:translate(-50%,-50%) scale(.95);
+
+    }
+
+}
+
+.fadeMessageOut{
+
+    animation:fadeMessageOut 2.5s ease forwards;
+
+}
+
+/*==================================================
+        DESAPARECER MENSAJES CONSTELACIÓN
+==================================================*/
+
+@keyframes fadeMessageOut{
+
+    from{
+
+        opacity:1;
+        transform:translate(-50%,-50%) scale(1);
+
+    }
+
+    to{
+
+        opacity:0;
+        transform:translate(-50%,-50%) scale(.95);
+
+    }
+
+}
+
+.fadeMessageOut{
+
+    animation:fadeMessageOut 2.2s ease forwards;
+
+}
